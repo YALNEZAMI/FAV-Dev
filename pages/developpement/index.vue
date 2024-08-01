@@ -1,6 +1,8 @@
 <template>
   <main>
-    <div class="lg:flex m-2 w-11/12 lg:w-full mx-auto lg:justify-center">
+    <div
+      class="lg:flex m-2 sm:my-16 w-11/12 lg:w-full mx-auto lg:justify-center"
+    >
       <div
         class="lg:flex justify-center lg:w-1/3"
         v-for="(protocole, i) of protocoles"
