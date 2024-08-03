@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-black">
+  <main class="bg-black p-3">
     <div class="flex flex-wrap">
       <div class="flex flex-col w-1/2 bg-black p-2">
         <h1 class="font-semibold text-white text-center underline">

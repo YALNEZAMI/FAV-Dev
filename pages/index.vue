@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="flex flex-wrap justify-center">
+    <div class="flex flex-wrap justify-center sm:my-20">
       <Service
         class="transition-all duration-500"
         v-for="(service, index) of store.services"
