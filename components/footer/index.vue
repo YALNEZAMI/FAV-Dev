@@ -81,6 +81,7 @@
       </a>-->
       <!--linkedin-->
       <a
+        target="_blank"
         title="Aller sur Linkedin"
         href="https://www.linkedin.com/in/yaser-alnezami/"
         ><svg
