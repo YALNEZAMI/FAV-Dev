@@ -1,16 +1,15 @@
 <template>
-  <main
-    class="flex flex-row-reverse text-white space-x-4 p-2 bg-black underline"
-  >
+  <main class="flex flex-row-reverse text-white space-x-4 p-2 bg-black">
     <div
       v-for="route in routes"
       :key="route.url"
-      class="scrollDownParent relative mx-2 hover:bg-white hover:text-black rounded px-2 md:my-1 md:mx-2"
+      class="scrollDownParent relative mx-2 hover:text-purple-300 hover:underline rounded px-1 md:my-1 md:mx-2"
       :class="{
-        'bg-white text-black': currentRoute.path == route.url,
+        ' text-purple-400': isRouteMatch(route),
       }"
     >
       <div class="flex cursor-pointer">
+        <img v-if="route.img" :src="route.img" alt="" class="w-10 h-7" />
         <NuxtLink v-if="route.type == 'direct'" :to="route.url">{{
           route.name
         }}</NuxtLink>
@@ -41,9 +40,9 @@
         <div
           v-for="route2 in route.routes"
           :key="route2.name"
-          class="hover:bg-black hover:text-white p-1 rounded cursor-pointer"
+          class="hover:text-purple-400 hover:underline p-1 rounded cursor-pointer"
           :class="{
-            'bg-black text-white': currentRoute.path == route2.url,
+            'text-purple-600 underline': currentRoute.path == route2.url,
           }"
         >
           <NuxtLink :to="route2.url">{{ route2.name }}</NuxtLink>
@@ -66,11 +65,13 @@ const routes = ref([
     name: "Accueil",
     url: "/",
     type: "direct",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRovJELHeYS9I4sLCte2d6md5b9rWS5CriVjA&s",
   },
   {
     name: "Services",
     url: "#",
     type: "scroll",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb1mWPVcRGCy5WVWhdZp_usZoWaFkjzgfAmA&s",
     routes: [
       {
         name: "Développement",
@@ -91,7 +92,19 @@ const routes = ref([
   },
 ]);
 
-onMounted(async () => {
-  setInterval(() => {}, 1000);
-});
+const isRouteMatch = (r: any) => {
+  let res = false;
+
+  if (currentRoute.path == r.url) {
+    res = true;
+  }
+  if (r.routes) {
+    r.routes.map((r2: any) => {
+      if (currentRoute.path == r2.url) {
+        res = true;
+      }
+    });
+  }
+  return res;
+};
 </script>
