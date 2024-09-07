@@ -64,12 +64,11 @@
 }
 @keyframes containerSentences {
   from {
-    padding-left: 0px;
     opacity: 1;
   }
   to {
-    padding-left: 25px;
-    opacity: 0.5;
+    padding-left: 20px;
+    opacity: 0.3;
   }
 }
 </style>
