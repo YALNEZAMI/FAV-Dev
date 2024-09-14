@@ -6,7 +6,6 @@
           Entreprise
         </h1>
         <NuxtLink
-          @click="entrepriseClick()"
           class="w-max mx-auto hover:text-gray-200 text-gray-300 my-1 text-center"
           v-for="route of routes"
           :key="route.name"
@@ -113,8 +112,8 @@
 <script lang="ts" setup>
 const routes = ref([
   {
-    url: "/qui-nous-sommes",
-    name: "Qui nous sommes",
+    url: "/a-propos",
+    name: "A propos",
   },
   {
     url: "/politique",
@@ -143,9 +142,4 @@ const components = ref([
     name: "Refonte",
   },
 ]);
-const entrepriseClick = () => {
-  alert(
-    "Je ne pensais pas que vous alliez aussi profondément dans mon site :)"
-  );
-};
 </script>

@@ -52,23 +52,25 @@
   animation: title linear;
   animation-timeline: view(0px 550px);
 }
-@keyframes title {
-  to {
-    background-color: black;
+@media screen and (max-width: 785px) {
+  @keyframes title {
+    to {
+      background-color: black;
+    }
   }
-}
 
-.containerSentences {
-  animation: containerSentences linear;
-  animation-timeline: view(0px 100px);
-}
-@keyframes containerSentences {
-  from {
-    opacity: 1;
+  .containerSentences {
+    animation: containerSentences linear;
+    animation-timeline: view(0px 100px);
   }
-  to {
-    padding-left: 20px;
-    opacity: 0.3;
+  @keyframes containerSentences {
+    from {
+      opacity: 1;
+    }
+    to {
+      padding-left: 20px;
+      opacity: 0.3;
+    }
   }
 }
 </style>

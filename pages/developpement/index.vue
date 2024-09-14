@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="my-4 text-center bg-blue-600 text-white p-2 font-semibold">
+    <div class="my-4 text-center bg-purple-600 text-white p-2 font-semibold">
       Commençons par en parler, envoyez-nous un mail
       <a class="text-black underline" href="mailto:yaseralnezami@gmail.com"
         >ici</a

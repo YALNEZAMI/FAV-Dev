@@ -7,7 +7,7 @@
     />
     <div class="w-3/4 p-1 flex flex-col justify-center text-center">
       <span class="italic font-bold text-xl">AVEC VOUS, CREONS !</span>
-      <span class="sm:block hidden"
+      <span class="sm:block hidden italic"
         >La révolution technologique n'attend personne, donc n'attendez rien et
         ayez votre propre site internet !</span
       >

@@ -1,5 +1,8 @@
 <template>
-  <main class="bg-purple-600 rounded-full p-5 h-80 w-80 border-4 border-black">
+  <main
+    style="background: linear-gradient(45deg, purple, blue)"
+    class="z-20 bg-purple-600 rounded-full p-5 h-80 w-80"
+  >
     <div class="bg-white w-max p-4 rounded-full px-6 mx-auto text-xl font-bold">
       _{{ protocole.index }}_
     </div>
