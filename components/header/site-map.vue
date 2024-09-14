@@ -1,7 +1,7 @@
 <template>
   <main
     v-if="getRoutes().length >= 1"
-    class="flex flex-wrap p-1 border-y-2 border-y-white bg-white w-screen"
+    class="flex border-y-2 border-gray-300 flex-wrap p-1 bg-white w-screen"
   >
     <div class="mx-1 flex">
       <span class="md:block hidden mx-1">Vous êtes ici : </span>
