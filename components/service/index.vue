@@ -66,9 +66,10 @@
   @keyframes containerSentences {
     from {
       opacity: 1;
+      padding-left: 0px;
     }
     to {
-      padding-left: 20px;
+      padding-left: 8px;
       opacity: 0.3;
     }
   }
