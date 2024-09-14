@@ -36,7 +36,7 @@
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="fleche arrow w-12 h-12 hover:h-16 hover:w-16 transition-all duration-200 bg-purple-300 rounded-full hover:bg-purple-600 cursor-pointer mx-auto"
+        class="fleche arrow w-12 h-12 hover:h-14 hover:w-14 transition-all duration-200 bg-purple-300 rounded-full hover:bg-purple-600 cursor-pointer mx-auto"
       >
         <path
           stroke-linecap="round"
