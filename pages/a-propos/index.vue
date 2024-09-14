@@ -18,9 +18,11 @@
         Notre équipe
       </h2>
 
-      <div class="flex flex-wrap justify-center space-x-4">
+      <div class="flex flex-wrap justify-center space-x-2 md:space-x-4">
         <!-- Membres de l'équipe -->
-        <div class="bg-white shadow-md rounded-lg p-6 text-center w-48">
+        <div
+          class="bg-white shadow-md rounded-lg p-4 md:p6 text-center md:w-48 w-36"
+        >
           <img
             class="w-24 h-24 rounded-full mx-auto mb-4"
             src="https://media.licdn.com/dms/image/v2/D4E35AQFDNXfTvHq-sw/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1724314051309?e=1726916400&v=beta&t=MVejm4GFDsnlX74r_EATYdqbgtbSQ2czn2snm3d6N3U"
@@ -30,7 +32,9 @@
           <p class="text-gray-600">Développeur Full Stack</p>
         </div>
 
-        <div class="bg-white shadow-md rounded-lg p-6 text-center w-48">
+        <div
+          class="bg-white shadow-md rounded-lg p-4 md:p6 text-center md:w-48 w-36"
+        >
           <img
             class="w-24 h-24 rounded-full mx-auto mb-4"
             src="https://scontent-cdg4-3.xx.fbcdn.net/v/t1.6435-9/116334750_377953773171149_864771461754557807_n.jpg?stp=dst-jpg_p526x296&_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=0KLjyjf4eh8Q7kNvgGNf7xj&_nc_ht=scontent-cdg4-3.xx&_nc_gid=Ang7gsfnVBnJuOJi4b2LXNk&oh=00_AYBTE-CpDlIRWAO5GwK4J_I3qTdJNFNFQMabAUw2BS28yg&oe=670CCF6D"
