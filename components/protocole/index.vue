@@ -24,4 +24,7 @@ const props = defineProps({
   protocole: Object,
 });
 const protocole = props.protocole;
+useHead({
+  title: useRoute().path.replace("/", ""),
+});
 </script>

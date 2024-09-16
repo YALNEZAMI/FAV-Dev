@@ -80,4 +80,7 @@ const props = defineProps({
   service: Object,
 });
 const service = props.service;
+useHead({
+  title: service.title,
+});
 </script>
