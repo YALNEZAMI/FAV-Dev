@@ -9,7 +9,14 @@
       }"
     >
       <div class="flex cursor-pointer">
-        <img v-if="route.img" :src="route.img" alt="" class="w-10 h-7" />
+        <!--route icon-->
+        <img
+          @click="useRouter().push(route.url)"
+          v-if="route.img"
+          :src="route.img"
+          alt=""
+          class="w-10 h-7"
+        />
         <NuxtLink v-if="route.type == 'direct'" :to="route.url">{{
           route.name
         }}</NuxtLink>
