@@ -1,5 +1,5 @@
 <template>
-  <main class="relative sm:w-96 sm:h-96 mx-auto my-3 h-80">
+  <main class="relative sm:w-96 sm:h-96 mx-auto my-3 h-80 shadow-lg">
     <img class="h-full w-full rounded" :src="service.image" alt="" />
     <div class="absolute top-5 left-1 w-full">
       <div

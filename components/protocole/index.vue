@@ -1,7 +1,7 @@
 <template>
   <main
     style="background: linear-gradient(45deg, purple, blue)"
-    class="z-20 bg-purple-600 rounded-full p-5 h-80 w-80"
+    class="z-20 bg-purple-600 rounded-full p-5 h-80 w-80 shadow-lg"
   >
     <div class="bg-white w-max p-4 rounded-full px-6 mx-auto text-xl font-bold">
       _{{ protocole.index }}_
