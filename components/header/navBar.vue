@@ -59,7 +59,6 @@
 <script lang="ts" setup>
 const currentRoute = useRoute();
 // const router = useRouter();
-console.log("currentroute", currentRoute);
 const routes = ref([
   {
     name: "Accueil",
