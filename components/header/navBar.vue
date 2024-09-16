@@ -52,7 +52,35 @@
             'text-purple-600 underline': currentRoute.path == route2.url,
           }"
         >
-          <NuxtLink :to="route2.url">{{ route2.name }}</NuxtLink>
+          <NuxtLink v-if="route2.type != 'scroll'" :to="route2.url">{{
+            route2.name
+          }}</NuxtLink>
+          <div v-else class="relative scrollDownParent2 flex">
+            <NuxtLink :to="route2.url">{{ route2.name }}</NuxtLink>
+            <!--arrow icon-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 pt-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+            <div
+              style="right: 8.55rem"
+              class="hidden scrollDownChild2 p-1 rounded flex-col absolute top-0 bg-black text-white"
+            >
+              <div v-for="route3 in route2.routes" :key="route3.name">
+                <NuxtLink :to="route3.url">{{ route3.name }}</NuxtLink>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -60,6 +88,9 @@
 </template>
 <style scoped>
 .scrollDownParent:hover .scrollDownChild {
+  display: flex;
+}
+.scrollDownParent2:hover .scrollDownChild2 {
   display: flex;
 }
 </style>
@@ -83,6 +114,7 @@ const routes = ref([
         name: "Développement",
         url: "/developpement",
         type: "direct",
+        routes: [{ name: "test", url: "/test", type: "direct" }],
       },
       {
         name: "Maintenance",
