@@ -25,7 +25,7 @@
         >
           <img
             class="w-24 h-24 rounded-full mx-auto mb-4"
-            src="https://media.licdn.com/dms/image/v2/D4E35AQFDNXfTvHq-sw/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1724314051309?e=1726916400&v=beta&t=MVejm4GFDsnlX74r_EATYdqbgtbSQ2czn2snm3d6N3U"
+            src="https://media.licdn.com/dms/image/v2/D4E35AQFDNXfTvHq-sw/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1724314051333?e=1728741600&v=beta&t=qOje-vMMPri0upKg2TXsbaG-zsslI1dD0p26IwC4QVg"
             alt="Membre de l'équipe"
           />
           <h3 class="text-xl font-semibold text-gray-800">Yaser Alnezami</h3>
@@ -37,7 +37,7 @@
         >
           <img
             class="w-24 h-24 rounded-full mx-auto mb-4"
-            src="https://scontent-cdg4-3.xx.fbcdn.net/v/t1.6435-9/116334750_377953773171149_864771461754557807_n.jpg?stp=dst-jpg_p526x296&_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=0KLjyjf4eh8Q7kNvgGNf7xj&_nc_ht=scontent-cdg4-3.xx&_nc_gid=Ang7gsfnVBnJuOJi4b2LXNk&oh=00_AYBTE-CpDlIRWAO5GwK4J_I3qTdJNFNFQMabAUw2BS28yg&oe=670CCF6D"
+            src="https://media.licdn.com/dms/image/v2/D4E35AQET9eU8kU8Aug/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1708773532187?e=1728741600&v=beta&t=Qh76ipEaoH-R-7M_Nk02GS43ZZWdZM_8zOYrkPrUG7Y"
             alt="Membre de l'équipe"
           />
           <h3 class="text-xl font-semibold text-gray-800">Jules Beck</h3>
