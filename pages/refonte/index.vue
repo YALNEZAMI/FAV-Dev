@@ -32,7 +32,9 @@
     </div>
     <div class="my-4 text-center bg-purple-600 text-white p-2 font-semibold">
       Commençons par en parler, envoyez-nous un mail
-      <a class="text-black underline" href="mailto:yaseralnezami@gmail.com"
+      <a
+        class="text-black underline transition-colors hover:text-blue-300"
+        href="mailto:yaseralnezami@gmail.com"
         >ici</a
       >
       !
