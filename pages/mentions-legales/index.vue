@@ -21,11 +21,12 @@
       <div class="bg-white shadow-md rounded-lg p-6">
         <p class="text-gray-700">
           <strong>Nom de l'entreprise :</strong> Fav-Dev<br />
-          <strong>Forme juridique :</strong> SAS au capital de 10 000 €<br />
-          <strong>Siège social :</strong> 123 Rue de la Création, 75000 Paris<br />
-          <strong>Téléphone :</strong> +33 1 23 45 67 89<br />
+          <strong>Forme juridique :</strong> Auto-entreprise au capital de 10
+          000 €<br />
+          <strong>Siège social :</strong> 1b rue Jules Guesde<br />
+          <strong>Téléphone :</strong> +33 7 67 56 66 03<br />
           <strong>Email :</strong> yaseralnezami@gmail.com<br />
-          <strong>Numéro de SIRET :</strong> *** *** ***<br />
+          <strong>Numéro de SIRET :</strong> 93344355800012<br />
           <strong>Directeur de publication :</strong> Alnezami Yaser<br />
         </p>
       </div>
