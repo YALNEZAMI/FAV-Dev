@@ -27,9 +27,8 @@
       </div>
     </div>
     <hr />
-    <div
-      class="flex justify-center space-x-4 bg-black text-white underline p-2"
-    >
+    <div class="flex justify-center space-x-4 bg-black text-white p-2">
+      Suivez-nous:
       <!--mail-->
       <a title="Aller sur Gmail" href="mailto:yaseralnezami@gmail.com"
         ><svg
