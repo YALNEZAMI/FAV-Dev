@@ -1,90 +1,86 @@
 <template>
-  <main class="flex flex-row-reverse text-white space-x-4 p-2 bg-black">
-    <div
-      v-for="route in routes"
-      :key="route.url"
-      class="scrollDownParent relative mx-2 hover:text-purple-300 hover:underline rounded px-1 md:my-1 md:mx-2"
-      :class="{
-        ' text-purple-400': isRouteMatch(route),
-      }"
-    >
-      <div class="flex cursor-pointer">
-        <!--route icon-->
-        <img
-          @click="useRouter().push(route.url)"
-          v-if="route.img"
-          :src="route.img"
-          alt=""
-          class="w-10 h-7"
-        />
-        <NuxtLink v-if="route.type == 'direct'" :to="route.url">{{
-          route.name
-        }}</NuxtLink>
-        <span v-else>{{ route.name }}</span>
-        <!--arrow icon-->
-        <svg
-          v-if="route.type == 'scroll'"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6 pt-1"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="m19.5 8.25-7.5 7.5-7.5-7.5"
-          />
-        </svg>
-      </div>
-
-      <!--scroll down section-->
+  <nav class="border-b border-white/10 bg-slate-950/90 backdrop-blur-sm">
+    <div class="mx-auto flex max-w-7xl flex-row-reverse items-center justify-end gap-2 px-4 py-3 sm:px-6 lg:px-8">
       <div
-        class="scrollDownChild hidden flex-col absolute left-0 top-6 bg-white text-black p-1"
-        v-if="route.type == 'scroll'"
+        v-for="route in routes"
+        :key="route.url"
+        class="scrollDownParent relative"
       >
         <div
-          v-for="route2 in route.routes"
-          :key="route2.name"
-          class="hover:text-purple-400 hover:underline p-1 rounded cursor-pointer"
+          class="flex cursor-pointer items-center gap-2 rounded-full border px-3 py-2 text-sm font-medium text-slate-200 transition-all duration-200 hover:border-violet-400/70 hover:bg-violet-500/10 hover:text-white"
           :class="{
-            'text-purple-600 underline': currentRoute.path == route2.url,
+            'border-violet-400/70 bg-violet-500/10 text-white shadow-[0_0_0_1px_rgba(167,139,250,0.35)]': isRouteMatch(route),
           }"
         >
-          <NuxtLink v-if="route2.type != 'scroll'" :to="route2.url">{{
-            route2.name
-          }}</NuxtLink>
-          <div v-else class="relative scrollDownParent2 flex">
-            <NuxtLink :to="route2.url">{{ route2.name }}</NuxtLink>
-            <!--arrow icon-->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6 pt-1"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m19.5 8.25-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-            <div
-              style="right: 8.55rem"
-              class="hidden scrollDownChild2 p-1 rounded flex-col absolute top-0 bg-black text-white"
-            >
-              <div v-for="route3 in route2.routes" :key="route3.name">
-                <NuxtLink :to="route3.url">{{ route3.name }}</NuxtLink>
+          <img
+            @click="useRouter().push(route.url)"
+            v-if="route.img"
+            :src="route.img"
+            alt=""
+            class="h-6 w-8 rounded-md object-cover"
+          />
+          <NuxtLink v-if="route.type == 'direct'" :to="route.url" class="tracking-wide">{{ route.name }}</NuxtLink>
+          <span v-else class="tracking-wide">{{ route.name }}</span>
+          <svg
+            v-if="route.type == 'scroll'"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.8"
+            stroke="currentColor"
+            class="h-4 w-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </div>
+
+        <div
+          class="scrollDownChild absolute left-0 top-12 z-50 hidden min-w-52 flex-col rounded-2xl border border-white/10 bg-slate-900/95 p-2 shadow-2xl shadow-slate-950/50"
+          v-if="route.type == 'scroll'"
+        >
+          <div
+            v-for="route2 in route.routes"
+            :key="route2.name"
+            class="rounded-xl px-3 py-2 text-sm text-slate-200 transition hover:bg-violet-500/10 hover:text-white"
+            :class="{
+              'bg-violet-500/10 text-white': currentRoute.path == route2.url,
+            }"
+          >
+            <NuxtLink v-if="route2.type != 'scroll'" :to="route2.url" class="block">{{ route2.name }}</NuxtLink>
+            <div v-else class="relative scrollDownParent2 flex items-center justify-between gap-2">
+              <NuxtLink :to="route2.url" class="block">{{ route2.name }}</NuxtLink>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+                class="h-4 w-4"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+              <div
+                style="right: 8.55rem"
+                class="scrollDownChild2 absolute top-0 hidden flex-col rounded-xl border border-white/10 bg-slate-950 p-2 text-slate-200"
+              >
+                <div v-for="route3 in route2.routes" :key="route3.name" class="rounded-lg px-2 py-1 hover:text-violet-300">
+                  <NuxtLink :to="route3.url">{{ route3.name }}</NuxtLink>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </main>
+  </nav>
 </template>
 <style scoped>
 .scrollDownParent:hover .scrollDownChild {
@@ -96,7 +92,6 @@
 </style>
 <script lang="ts" setup>
 const currentRoute = useRoute();
-// const router = useRouter();
 const routes = ref([
   {
     name: "Accueil",

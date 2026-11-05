@@ -1,28 +1,28 @@
 <template>
-  <main
+  <nav
     v-if="getRoutes().length >= 1"
-    class="flex border-y-2 border-gray-300 flex-wrap p-1 bg-white w-screen"
+    class="border-b border-white/10 bg-slate-900/60 backdrop-blur-sm"
   >
-    <div class="mx-1 flex">
-      <span class="md:block hidden mx-1">Vous êtes ici : </span>
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-3 text-sm text-slate-300 sm:px-6 lg:px-8">
+      <span class="hidden font-medium text-slate-400 md:inline">Vous êtes ici :</span>
       <NuxtLink
         to="/"
         id="accueil-route"
-        class="md:text-base text-sm underline font-bold hover:opacity-70"
-        >Accueil</NuxtLink
+        class="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 font-semibold text-slate-200 transition hover:border-violet-400/60 hover:text-white"
       >
+        Accueil
+      </NuxtLink>
+      <template v-for="route of getRoutes()" :key="route">
+        <span class="text-slate-500">/</span>
+        <NuxtLink
+          class="rounded-full border border-transparent px-2.5 py-1 font-medium text-slate-300 transition hover:border-violet-400/40 hover:text-white"
+          :to="'/' + route"
+        >
+          {{ (route.charAt(0).toUpperCase() + route.slice(1)).replaceAll("-", " ") }}
+        </NuxtLink>
+      </template>
     </div>
-    <div v-for="route of getRoutes()" :key="route">
-      <span class="md:text-base text-sm">-></span>
-      <NuxtLink
-        class="md:text-base text-sm mx-1 underline font-bold hover:opacity-70"
-        :to="'/' + route"
-        >{{
-          (route.charAt(0).toUpperCase() + route.slice(1)).replaceAll("-", " ")
-        }}</NuxtLink
-      >
-    </div>
-  </main>
+  </nav>
 </template>
 <script lang="ts" setup>
 const getRoutes = () => {

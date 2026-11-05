@@ -1,21 +1,20 @@
 <template>
-  <main class="relative sm:w-96 sm:h-96 mx-auto my-3 h-80 shadow-lg">
-    <img class="h-full w-full rounded" :src="service.image" alt="" />
-    <div class="absolute top-5 left-1 w-full">
-      <div
-        class="title w-max mx-auto py-4 px-3 rounded-ss-xl rounded-ee-xl bg-purple-200 text-black font-bold text-xl"
-      >
+  <article class="group relative mx-auto my-4 h-[22rem] w-full max-w-[22rem] overflow-hidden rounded-[28px] border border-white/10 bg-slate-900 shadow-[0_20px_45px_rgba(15,23,42,0.45)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_28px_55px_rgba(109,40,217,0.25)]">
+    <img class="h-full w-full object-cover transition duration-500 group-hover:scale-105" :src="service.image" alt="" />
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-slate-900/10"></div>
+
+    <div class="absolute left-0 right-0 top-5 px-4">
+      <div class="title mx-auto w-max max-w-[85%] rounded-full border border-violet-300/50 bg-gradient-to-r from-violet-200 via-violet-100 to-cyan-100 px-4 py-2 text-center text-base font-black text-slate-900 shadow-lg shadow-violet-500/10">
         {{ service.title }}
       </div>
     </div>
-    <div
-      class="containerSentences absolute w-full top-28 left-0 px-1 text-white font-bold text-lg"
-    >
+
+    <div class="containerSentences absolute inset-x-0 top-24 px-3 text-white">
       <div
-        class="sentence py-4 px-2 w-max rounded-md text-center my-2 bg-black"
+        class="sentence my-2 w-max max-w-[75%] rounded-full border border-white/10 bg-slate-950/70 px-3 py-2 text-sm font-semibold backdrop-blur-sm"
         :class="{
-          'ml-12': index % 2 != 0,
-          'ml-2': index % 2 == 0,
+          'ml-auto': index % 2 != 0,
+          'mr-auto': index % 2 == 0,
         }"
         v-for="(sentence, index) of service.sentences"
         :key="index"
@@ -26,26 +25,27 @@
 
     <NuxtLink
       :to="service.url"
-      class="absolute left-0 w-full bottom-4"
+      class="absolute inset-x-0 bottom-5 flex justify-center"
       title="Voir le processus en 3 étapes"
     >
-      <svg
-        style="background: linear-gradient(white, purple)"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="fleche arrow w-12 h-12 hover:h-14 hover:w-14 transition-all duration-200 bg-purple-300 rounded-full hover:bg-purple-600 cursor-pointer mx-auto"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-        />
-      </svg>
+      <span class="flex h-14 w-14 items-center justify-center rounded-full border border-violet-300/50 bg-gradient-to-br from-white via-violet-100 to-violet-300 text-slate-900 shadow-lg shadow-violet-500/20 transition-all duration-200 hover:h-16 hover:w-16 hover:bg-gradient-to-br hover:from-violet-200 hover:to-violet-500 hover:text-white">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.8"
+          stroke="currentColor"
+          class="h-7 w-7"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          />
+        </svg>
+      </span>
     </NuxtLink>
-  </main>
+  </article>
 </template>
 <style scoped>
 .title {
@@ -55,7 +55,8 @@
 @media screen and (max-width: 785px) {
   @keyframes title {
     to {
-      background-color: black;
+      background-color: rgba(15, 23, 42, 0.9);
+      color: white;
     }
   }
 
@@ -70,7 +71,7 @@
     }
     to {
       padding-left: 8px;
-      opacity: 0.3;
+      opacity: 0.45;
     }
   }
 }
